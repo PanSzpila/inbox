@@ -10,7 +10,8 @@ const __dirname = path.dirname(__filename);
 const inboxPath = path.resolve(__dirname, "contracts", "inbox.sol");
 const source = fs.readFileSync(inboxPath, "utf8");
 
-export default myContract = solc.compile(source, 1).contracts[":Inbox"];
+const myContract = solc.compile(source, 1).contracts[":Inbox"];
+export default myContract;
 
 export const bytecode = myContract.bytecode;
 export const abiInterface = myContract.abiInterface;

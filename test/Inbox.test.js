@@ -1,8 +1,8 @@
 import assert from "assert";
-import ganache from "ganache";
+import ganache from "ganache-cli";
 import { beforeEach } from "mocha";
 import { Web3 } from "web3";
-import { abiInterface, bytecode } from "../compile";
+import { abiInterface, bytecode } from "../compile.js";
 
 const web3 = new Web3(ganache.provider());
 
